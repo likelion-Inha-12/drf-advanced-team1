@@ -12,24 +12,17 @@ from rest_framework.decorators import api_view
 from .serializers import *
 
 @api_view(['POST'])
-def create_tag(request):
-    tag = Category(request.data.get('tag'))
-    tag.save()
-    return JsonResponse(status=204)
-
-@api_view(['POST'])
 def create_assignment(request):
-
-    assignment = Assignment(
-        title = request.data.get('title'),
-        deadline = request.data.get('deadline'),
-        part = request.data.get('part'),
-        # tag_id = request.data.get('Category'),
-        link = request.data.get('link'),
-        content = request.data.get('content')
-    )
-    assignment.save()
-    return JsonResponse({'message':'success'})
+    serializer = AssignmentPostSerializer(data=request.data)
+    if serializer.is_valid(): # Serializer의 Meta 필드에 맞게 입력 받았는지 확인하는 조건문
+        tag_name = serializer.validated_data.get('tag')
+        if tag_name:
+            tag, _ = Category.objects.get_or_create(name=tag_name)
+            serializer.validated_data['tag'] = tag
+        serializer.save()
+        return JsonResponse({"message":"success"})
+    
+    return JsonResponse({"message":"fail"}, status=400)
 
 
 @api_view(['POST'])

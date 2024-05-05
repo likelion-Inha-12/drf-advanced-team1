@@ -4,4 +4,5 @@ from .models import *
 
 admin.site.register(Assignment)
 admin.site.register(Category)
+admin.site.register(Submission)
 # Register your models here.
