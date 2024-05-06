@@ -59,10 +59,10 @@ class AssignmentAPIView(APIView):
 def update_assignment(request, pk):
     assignment = get_object_or_404(Assignment, pk=pk)
     if request.method == 'PUT':
-        serializer = AssignmentPostSerializer(assignment, data=request.data) #전체 업데이트
+        serializer = AssignmentSerializer(assignment, data=request.data) #전체 업데이트
     elif request.method == 'PATCH':
-        serializer = AssignmentPostSerializer(assignment, data=request.data, patrial=True) #일부 업데이트
-    
+        serializer = AssignmentSerializer(assignment, data=request.data, partial=True) #일부 업데이트
+
     if serializer.is_valid():
         serializer.save()
         return JsonResponse({"message": "success"})

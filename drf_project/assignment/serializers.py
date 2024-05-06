@@ -4,7 +4,7 @@ from django.utils import timezone #생성 시간
 
 
 class SubmissionSerializer(serializers.ModelSerializer):
-    submitted_at = serializers.DateTimeField(source='created_at')  # 제출물 작성 일자
+    submitted_at = serializers.DateTimeField(source='create_at')  # 제출물 작성 일자
     class Meta:
         model = Submission
         fields = ["content", "link", "create_at"]
@@ -24,7 +24,7 @@ class AssignmentPostSerializer(serializers.ModelSerializer):
 
 class AssignmentSerializer(serializers.ModelSerializer):
      #과제 조회 시 사용할 serializer입니다.
-     tag = serializers.CharField(source='tag.name') #태그 이름 가져오기
+     tag = serializers.CharField(source='tag.name', read_only=True) #태그 이름 가져오기
      submissions = SubmissionSerializer(many=True, read_only=True)
      time_left = serializers.SerializerMethodField() #과제 마감까지 남은 시간
      submissions_count = serializers.SerializerMethodField(read_only=True) #과제 제출물 개수
