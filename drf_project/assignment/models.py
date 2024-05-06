@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.timezone import now #생성 시간
+
 
 class Category(models.Model):
     name = models.CharField(max_length=20, unique=True)
@@ -14,7 +14,7 @@ class Assignment(models.Model):
         ('BE', 'BE'),
     )
     title = models.CharField(max_length=50)
-    created_at = models.DateTimeField(auto_now_add=True)
+    create_at = models.DateTimeField(auto_now_add=True)
     deadline = models.DateField()
     part = models.CharField(max_length=3, choices=PART_OPTION)
     tag = models.ForeignKey(Category, verbose_name="Category", on_delete=models.SET_NULL, related_name="assignments", null=True)
@@ -32,7 +32,7 @@ class Assignment(models.Model):
 class Submission(models.Model):
     content = models.CharField(max_length=200)
     link = models.URLField()
-    created_at = models.DateTimeField(auto_now_add=True)
+    create_at = models.DateTimeField(auto_now_add=True)
     #member_id = models.ForeignKey(Member, verbose_name="Member",on_delete=models.CASCADE, related_name="submissions")
     assignment_id = models.ForeignKey(Assignment, verbose_name="Assignment", on_delete=models.CASCADE, related_name="submissions", null=True)
 

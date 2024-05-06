@@ -41,14 +41,14 @@ def create_submission(request, pk):
 
 #api 3 과제 목록 조회
 class AssignmentListAPIView(APIView):
-    def get_all_assignment(self, request):
+    def get(self, request):
         assignments = Assignment.objects.all()
         serializer = AssignmentSerializer(assignments, many=True) #퀘리셋이 많은 인자를 가짐
         return Response(serializer.data)
 
 #api 4 특정 과제 조회
 class AssignmentAPIView(APIView): 
-    def get_assignment(self, request, pk):
+    def get(self, request, pk):
         assignment = get_object_or_404(Assignment, pk=pk)
         serializer = AssignmentSerializer(assignment)
         return Response(serializer.data)
@@ -66,7 +66,7 @@ def update_assignment(request, pk):
     if serializer.is_valid():
         serializer.save()
         return JsonResponse({"message": "success"})
-    return JsonResponse(serializer.error, status=400)
+    return JsonResponse(serializer.errors, status=400)
 
 #api 6 특정 과제 삭제
 @api_view(['DELETE'])
