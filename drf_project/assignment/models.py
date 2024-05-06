@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Category(models.Model):
     name = models.CharField(max_length=20, unique=True)
 
@@ -23,7 +24,6 @@ class Assignment(models.Model):
 
     def __str__(self):
         return self.title
-
 
 # class Member(models.Model):
 #     name = models.CharField(max_length=20)
