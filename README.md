@@ -4,7 +4,7 @@ drf실습 1팀 과제 레포입니다.
 
 
 ## API 명세서
-[노션 링크](https://purple-channel-bb4.notion.site/API-2307c95918714315be37ae837ceb0b89)
+[https://purple-channel-bb4.notion.site/API-2307c95918714315be37ae837ceb0b89](https://purple-channel-bb4.notion.site/API-2307c95918714315be37ae837ceb0b89)
 
 
 ## API 스크린샷
