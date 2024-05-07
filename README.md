@@ -4,7 +4,7 @@ drf실습 1팀 과제 레포입니다.
 
 
 ## API 명세서
-![](<https://purple-channel-bb4.notion.site/API-2307c95918714315be37ae837ceb0b89>)
+![API 명세서](<https://purple-channel-bb4.notion.site/API-2307c95918714315be37ae837ceb0b89>)
 
 ## API 스크린샷
 ### #1 과제 생성(오다솔)
