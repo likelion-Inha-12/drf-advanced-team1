@@ -10,5 +10,7 @@ urlpatterns = [
     path('submission/list/', views.AssignmentListAPIView.as_view(), name='List'),
     path('submission/list/<int:pk>/', views.AssignmentAPIView.as_view(), name='Detail'),
     path('submission/update/<int:pk>/', views.update_assignment),
-    path('submission/delete/<int:pk>/', views.delete_assignment)
+    path('submission/delete/<int:pk>/', views.delete_assignment),
+    path('part/<str:part>', views.get_part),
+    path('tag/<str:tag>', views.get_tag),
 ]

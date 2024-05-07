@@ -75,4 +75,32 @@ def delete_assignment(request, pk):
     assignment.delete()
     return JsonResponse({"message": "deleted"})
 
+#api 7 파트별 조회
+@api_view(['GET'])
+def get_part(request, part):
+    part_set = ['ALL', 'BE', 'FE']
+    if part not in part_set:
+        data = {'message':'존재하지 않는 파트입니다. [ALL|BE|FE] 중에 입력해주세요.'}
+        return Response(data,status=404)
+    
+    assignments = Assignment.objects.filter(part=part)
+    serializer = AssignmentSerializer(assignments, many=True)
+    return Response(serializer.data)
 
+#api 8 태그별 조회
+@api_view(['GET'])
+def get_tag(request,tag):
+    try:
+        category = Category.objects.get(name=tag)
+    
+    except Category.DoesNotExist:
+        # 카테고리가 존재하지 않을 경우 현재 모든 카테고리 제시
+        tags = Category.objects.all()
+        tag_list = [{'name': tag.name} for tag in tags] 
+        data = {'message': '존재하지 않는 카테고리 입니다.', 'tag_list': tag_list}
+        return Response(data, status=404)
+    
+    assignments = Assignment.objects.filter(tag=category)
+    serializer = AssignmentSerializer(assignments, many=True)
+    return Response(serializer.data)
+    
