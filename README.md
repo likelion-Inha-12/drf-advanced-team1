@@ -23,12 +23,17 @@ PATCH
 #6 특정 과제 삭제(손가영)
 ![Api6](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api6.png)
 
-#7 과제 파트별 조회
+#7 과제 파트별 조회  
+전체 조회  
 ![Api7](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_ALL.png)
+백엔드 조회  
 ![Api7](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_BE.png)
+프론트엔드 조회  
 ![Api7](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_FE.png)
 
-#8 과제 태그별 조회
+#8 과제 태그별 조회  
+태그 조회 성공  
 ![Api8](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api8_성공.png)
+태그 조회 실패  
 ![Api8](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api8_실패.png)
 
