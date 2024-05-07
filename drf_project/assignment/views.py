@@ -52,6 +52,12 @@ class AssignmentAPIView(APIView):
         assignment = get_object_or_404(Assignment, pk=pk)
         serializer = AssignmentSerializer(assignment)
         return Response(serializer.data)
+    
+    #api 6 특정 과제 삭제
+    def delete(self, request, pk):
+        assignment = get_object_or_404(Assignment, pk=pk)
+        assignment.delete()
+        return Response({"message": "deleted"}, status=status.HTTP_204_NO_CONTENT)
 
 #api 5 특정 과제 수정
 @api_view(['PUT', 'PATCH']) 
@@ -67,13 +73,6 @@ def update_assignment(request, pk):
         serializer.save()
         return JsonResponse({"message": "success"})
     return JsonResponse(serializer.errors, status=400)
-
-#api 6 특정 과제 삭제
-@api_view(['DELETE'])
-def delete_assignment(request, pk):
-    assignment = get_object_or_404(Assignment, pk=pk)
-    assignment.delete()
-    return JsonResponse({"message": "deleted"})
 
 #api 7 파트별 조회
 @api_view(['GET'])
