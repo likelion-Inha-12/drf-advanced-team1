@@ -23,7 +23,7 @@ drf실습 1팀 과제 레포입니다.
 
 ## #5 특정 과제 수정(손가영)
 PUT
-![Api5_PUT]()
+![Alt text](images/api5_put.png)
 
 PATCH
 ![Api5_PATCH](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api5.png>)
