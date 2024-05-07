@@ -24,19 +24,24 @@ PATCH
 ![Api6](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api6.png)
 
 #7 과제 파트별 조회(배민혁)
-- 전체 조회  
+- 전체 조회
+
 ![Api7_ALL](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_ALL.png)
 
--백엔드 조회  
+- 백엔드 조회 
+
 ![Api7_BE](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_BE.png)
 
--프론트엔드 조회  
+- 프론트엔드 조회  
+
 ![Api7_FE](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_FE.png)
 
 #8 과제 태그별 조회(배민혁)
 - 태그 조회 성공  
+
 ![Api8_Success](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api8_성공.png)
 
 - 태그 조회 실패  
+
 ![Api8_Fail](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api8_실패.png)
 
