@@ -18,7 +18,7 @@ PUT
 ![Api5_PUT]()
 
 PATCH
-![Api5_PATCH](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api5.png>)
+![Api5_PATCH](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api5.png>)
 
 #6 특정 과제 삭제(손가영)
 ![Api6](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api6.png)
