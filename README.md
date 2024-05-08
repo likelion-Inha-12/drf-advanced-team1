@@ -17,7 +17,7 @@ assignment list api view 클래스를 이용해 구현한 class based view 입�
 
 ## #4 과제 내용 조회(손가영)
 ![Api4](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api4.png>) 
-이또한 CBV를 이용해 AssignmentAPIView 클래스를 사용하여 구현되었습니다.
+CBV를 이용해 AssignmentAPIView 클래스를 사용하여 구현되었습니다.
 CBV를 이용해 6번 기능의 메소드도 함께 각 HTTP 메소드에 대응하는 로직을 내부에 구현하였습니다.
 
 
@@ -27,7 +27,7 @@ PUT
 
 PATCH
 ![Api5_PATCH](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api5.png>)
-Function based view 즉 FBV를 사용했습니다. 그래서 이 api는 update_assignment 함수를 통해 제공됩니다. 여기서는 PUT과 PATCH 두 가지 HTTP 메소드를 지원합니다
+FBV를 사용했으므로 이 api는 update_assignment 함수를 통해 제공됩니다. 여기서는 PUT과 PATCH 두 가지 HTTP 메소드를 지원합니다
 
 
 ## #6 특정 과제 삭제(손가영)
