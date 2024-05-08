@@ -53,7 +53,6 @@ CBV
 
 ![Api7_FE](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api7_FE.png)
 
-먼저 url로 part를 입력 받습니다. 미리 코드 안에 있던 파트셋에 입력받은 파트가 있다면 Assingment 객체 중 입력 받은 파트와 일치하는 모든 과제들을 assignments에 저장합니다. serializer을 통해서 직렬화를 수행하고 반환합니다.
 
 
 ### #8 과제 태그별 조회(배민혁)
@@ -64,6 +63,3 @@ CBV
 - 태그 조회 실패  
 
 ![Api8_Fail](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api8_실패.png)
-
-파트별 조회와 마찬가지로 url로 tag를 입력 받습니다.  Category의 객체 중 입력한 tag와 일치하는 객체가 있다면 category에 저장하고, 그것을 바탕으로 일치하는 과제들을 모두 찾고, assignments에 저장한다음 직렬화하여 반환합니다.
-만약 일치하는 태그가 없다면 없다고 알려주고 Category 안에 있는 모든 태그들을 불러와 현재 있는 태그를 알려줍니다.
