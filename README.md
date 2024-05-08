@@ -13,12 +13,11 @@ drf실습 1팀 과제 레포입니다.
 
 ## #3 과제 목록 조회(손가영)
 ![Api3](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api3.png>)
-assignment list api view 클래스를 이용해 구현한 class based view 입니다.
+CBV
 
 ## #4 과제 내용 조회(손가영)
 ![Api4](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api4.png>) 
-CBV를 이용해 AssignmentAPIView 클래스를 사용하여 구현되었습니다.
-CBV를 이용해 6번 기능의 메소드도 함께 각 HTTP 메소드에 대응하는 로직을 내부에 구현하였습니다.
+CBV
 
 
 ## #5 특정 과제 수정(손가영)
@@ -27,12 +26,12 @@ PUT
 
 PATCH
 ![Api5_PATCH](<https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api5.png>)
-FBV를 사용했으므로 이 api는 update_assignment 함수를 통해 제공됩니다. 여기서는 PUT과 PATCH 두 가지 HTTP 메소드를 지원합니다
+FBV
 
 
 ## #6 특정 과제 삭제(손가영)
 ![Api6](https://github.com/likelion-Inha-12/drf-advanced-team1/blob/main/images/api6.png)
-위 4번 기능의 CBV에서 함께 구현되었습니다.
+CBV
 
 
 ## #7 과제 파트별 조회(배민혁)
